@@ -1,7 +1,16 @@
 import {RenderArena} from "./RenderArena.js";
 import {calculateTypeDamageMultiplier} from "./typeDamageMultiplier.js";
+import { endBattle } from "./endBattle.js";
+
+
 
 export const resolveTurn = async (players, chosenMoves) => {
+
+    const checkGameOver = (defender, attacker) => {
+        if(defender.hp <= 0){
+            endBattle(attacker)
+        }
+    }   
 
     let player1 = players[0];
     let player2 = players[1];
@@ -66,11 +75,12 @@ export const resolveTurn = async (players, chosenMoves) => {
         const damage = calculateDamage(attacker, defender, move);
 
         defender.takeDamage(damage);
+        checkGameOver(defender, attacker)
     });
 
     chosenMoves = [];
     attackOrder = [];
 
     // alert("Its battling time");
-    await RenderArena(players, 0, chosenMoves);
+    RenderArena(players, 0, chosenMoves);
 };
