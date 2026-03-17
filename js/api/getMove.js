@@ -1,6 +1,6 @@
 const apiURL = "https://pokeapi.co/api/v2/"
 
-// Fetches pokemon
+// Fetches move
 
 export const getMove = async(move) => {
     try {
