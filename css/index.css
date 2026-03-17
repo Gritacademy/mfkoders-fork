@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns like the sketch */
@@ -38,19 +44,20 @@ nav {
     display: flex;
     justify-content: center;
     gap: 15px;
-    padding: 10px 0;
-    background-color: #FFC300;
+    padding: 25px;
+    background-color: #ffcc00;
 }
 
 nav a {
-    background-color: #ff9500; /* Orange from sketch */
+    background-color: #ff9900;
     color: white;
-    padding: 10px 30px;
     text-decoration: none;
-    border-radius: 25px; /* Makes them pill-shaped */
+    padding: 10px 45px;
+    border-radius: 30px;
     font-weight: bold;
+    font-size: 20px;
     font-family: sans-serif;
-    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav a:hover {
