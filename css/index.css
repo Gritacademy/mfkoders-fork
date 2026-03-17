@@ -6,14 +6,14 @@
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns like the sketch */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
-    background-color: #f0e68c; /* Light yellow background */
+    background-color: #f0e68c; 
     padding: 40px;
 }
 
 .card {
-    background-color: #ffcc00; /* Bright orange-yellow card */
+    background-color: #ffcc00; 
     padding: 20px;
     text-align: center;
     border-radius: 4px;
@@ -25,21 +25,20 @@
 }
 
 .image-container {
-    background-color: #ff9900; /* Darker orange for image box */
+    background-color: #ff9900; 
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 15px;
 }
 
 .stats-container {
-    background-color: #ffe066; /* Lighter yellow for stats box */
+    background-color: #ffe066;
     padding: 10px;
     border-radius: 8px;
     font-size: 0.8rem;
     text-align: left;
 }
 
-/* --- Navigation (Pill Style) --- */
 nav {
     display: flex;
     justify-content: center;
@@ -65,16 +64,15 @@ nav a:hover {
     background-color: #e68600;
 }
 
-/* --- Footer (Layout & Background) --- */
 footer {
-    background-color: #ffcc00; /* Main yellow-orange */
+    background-color: #ffcc00;
     padding: 10px, 0, 0px;
     font-family: sans-serif;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Pushes Contact left, Nav right */
+    justify-content: space-between; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -92,7 +90,7 @@ footer {
 }
 
 .footer-section ul {
-    list-style: none; /* Removes bullet points */
+    list-style: none;
     padding: 0;
 }
 
@@ -105,16 +103,15 @@ footer {
     text-decoration: underline;
 }
 
-/* --- Bottom Copyright --- */
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
-    border-top: 1px solid rgba(0,0,0,0.1); /* Subtle divider */
+    border-top: 1px solid rgba(0,0,0,0.1);
     padding-top: 20px;
     font-weight: bold;
 }
 
-/* 1. Desktop View (4 columns as per your sketch) */
+
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -122,27 +119,25 @@ footer {
     padding: 20px;
 }
 
-/* 2. Responsive View (Tablets/Phones) */
-/* When the screen is 800px wide or less */
+
 @media (max-width: 800px) {
     .cards {
-        grid-template-columns: repeat(2, 1fr); /* Only 2 cards next to each other */
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .footer-content {
-        flex-direction: column; /* Stack footer sections vertically */
+        flex-direction: column; 
         text-align: center;
         gap: 30px;
     }
 
     nav {
-        flex-wrap: wrap; /* Buttons will wrap to next line if screen is too thin */
+        flex-wrap: wrap; 
     }
 }
 
-/* 3. Extra Small View (Optional: 1 column for very small phones) */
 @media (max-width: 450px) {
     .cards {
-        grid-template-columns: 1fr; /* 1 card taking full width */
+        grid-template-columns: 1fr; 
     }
 }
