@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
-
+#pokemon1{
+    float:right;
+}
 body {
     background-color: white;
     color: #333;
