@@ -1,4 +1,4 @@
-import {resolveTurn} from "./resolveTurn.js";
+import { resolveTurn } from "./resolveTurn.js";
 
 export const RenderArena = (players, whosTurn, chosenMoves) => {
     if (document.querySelector(".arena")) {
@@ -22,6 +22,7 @@ export const RenderArena = (players, whosTurn, chosenMoves) => {
     const body = document.querySelector("body");
     body.appendChild(ArenaDiv);
 
+    let count = 0;
     players.forEach((player) => {
         const TopContainer = document.querySelector(".top-container");
         const BottomContainer = document.querySelector(".bottom-container");
@@ -30,7 +31,8 @@ export const RenderArena = (players, whosTurn, chosenMoves) => {
         playerDiv.className = "playerDiv";
 
         const playerSprite = document.createElement("img");
-
+        playerSprite.id = "pokemon" + count;
+        count++;
         const playerTurnName = document.createElement("p");
         playerTurnName.textContent = player.name;
 
